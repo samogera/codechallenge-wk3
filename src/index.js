@@ -49,7 +49,6 @@ async function handleTicket(movie) {
         let ticketCount = parseInt(ticketCountSpan.textContent);
         if (ticketCount > 0) {
             ticketCount--;
-            ticketCountSpan.textContent = ticketCount;
 
             const response = await fetch(`http://localhost:3000/films/${movie.id}`, {
                 method: "PATCH",
@@ -65,11 +64,14 @@ async function handleTicket(movie) {
             }
             const updatedMovie = await response.json();
             movie.tickets_sold = updatedMovie.tickets_sold;
+
+            ticketCountSpan.textContent = ticketCount; // Update the displayed ticket count
         }
     } catch (error) {
         console.error('Error updating ticket sales:', error);
     }
 }
+
 
 async function handleDelete(movie) {
     try {
