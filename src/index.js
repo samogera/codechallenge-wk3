@@ -1,6 +1,6 @@
 async function fetchMoviesAndDisplay() {
     try {
-        const response = await fetch("https://json-server-kof9.onrender.com");
+        const response = await fetch("https://json-server-kof9.onrender.com/films");
         if (!response.ok) {
             throw new Error('Failed to fetch movies. Server responded with status: ' + response.status);
         }
