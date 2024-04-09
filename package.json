@@ -10,6 +10,16 @@
   "license": "ISC",
   "dependencies": {
     "db-json": "^0.1.0",
+    "json-server": "^1.0.0-alpha.23",
     "portfinder": "^1.0.32"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samogera/codechallenge-wk3.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/samogera/codechallenge-wk3/issues"
+  },
+  "homepage": "https://github.com/samogera/codechallenge-wk3#readme"
 }
