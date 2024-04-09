@@ -1,6 +1,6 @@
 async function fetchMoviesAndDisplay() {
     try {
-        const response = await fetch("https://json-server-kof9.onrender.com");
+        const response = await fetch("https://json-server-8njc.onrender.com/films");
         if (!response.ok) {
             throw new Error('Failed to fetch movies. Server responded with status: ' + response.status);
         }
@@ -50,7 +50,7 @@ async function handleTicket(movie) {
         if (ticketCount > 0) {
             ticketCount--;
 
-            const response = await fetch(`http://localhost:3000/films/${movie.id}`, {
+            const response = await fetch(`https://json-server-8njc.onrender.com/films/${movie.id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"
@@ -72,10 +72,9 @@ async function handleTicket(movie) {
     }
 }
 
-
 async function handleDelete(movie) {
     try {
-        const response = await fetch(`http://localhost:3000/films/${movie.id}`, {
+        const response = await fetch(`https://json-server-8njc.onrender.com/films/${movie.id}`, {
             method: "DELETE"
         });
         if (!response.ok) {
